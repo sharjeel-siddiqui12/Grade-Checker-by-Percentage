@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Practice</title>
+</head>
+<body>
+    
+    <form onsubmit="calculate(); return false">
+        Enter Percentage <input type="number" id="percen">
+
+        <button type="submit"> Result </button>
+    </form>
+
+    <br>
+    <h2 id="result"></h2>
+
+    <script>
+
+    function calculate(){
+    let percentage = +document.querySelector("#percen").value
+
+    if(percentage >= 80){
+        Percentage = "A+";
+        console.log("A+" );
+        document.querySelector("#result").innerHTML = Percentage
+    }
+
+    else if(percentage >= 70){
+        Percentage = "A";
+        console.log("A" );
+        document.querySelector("#result").innerHTML = Percentage
+    }
+    else if (percentage >= 60){
+        Percentage = "B";
+        console.log("B" );
+        document.querySelector("#result").innerHTML = Percentage
+    }
+
+    else if (percentage >= 50){
+        Percentage = "C";
+        console.log("C" );
+        document.querySelector("#result").innerHTML = Percentage
+    }
+
+    else if (percentage >= 40){
+        Percentage = "D";
+        console.log("D" );
+        document.querySelector("#result").innerHTML = Percentage
+    }
+
+    else{
+        Percentage = "Fai;";
+        console.log("Fail" );
+        document.querySelector("#result").innerHTML = Percentage
+    }
+}
+
+      
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
