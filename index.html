@@ -9,20 +9,20 @@
 <body>
     
     <form onsubmit="calculate(); return false">
-        Enter Percentage <input type="number" id="percen">
+        Enter Percentage <input type="number" id="percen" min="0" max="100">
 
         <button type="submit"> Result </button>
     </form>
 
     <br>
-    <h2 id="result"></h2>
+    <h2 id="result">Grade: </h2>
 
     <script>
 
     function calculate(){
     let percentage = +document.querySelector("#percen").value
 
-    if(percentage >= 80){
+    if(percentage >= 80 && percentage <=100){
         Percentage = "A+";
         console.log("A+" );
         document.querySelector("#result").innerHTML = Percentage
@@ -52,7 +52,7 @@
     }
 
     else{
-        Percentage = "Fai;";
+        Percentage = "Fail";
         console.log("Fail" );
         document.querySelector("#result").innerHTML = Percentage
     }
